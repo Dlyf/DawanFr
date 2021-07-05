@@ -15,7 +15,7 @@
 7. Creer une balise div avec la classe container, dans laquelle nous allons inclure les 3 precedentes.
 7. Rendre la vue de la div container.
 
-8. Inclure JXS (ne pas oublier de passer le type de la balise script sur text/babel). 
+8. Inclure JSX (ne pas oublier de passer le type de la balise script sur text/babel). 
 9. Inclure Font Awesome
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
