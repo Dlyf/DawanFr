@@ -8,7 +8,7 @@
         <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
         <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
    
-3. Créer une div avec un id 'app'
+3. Créer une div avec un id 'root' (HTML)
 4. Dans la balise div, créer un balise titre avec le titre de votre choix et stockez la dans une variable (Sans jsx).
 5. Dans la balise div, créer une balise paragraphe qui affichera le message de votre choix (Sans jsx).
 6. Dans la balise div, creer une balise img avec une image de votre choix (Sans jsx).
