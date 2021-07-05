@@ -9,8 +9,8 @@
 
 2. Creer une classe composant Produits
 3. Dans le composant Produits, dans la fonction render:
-        - Si la liste des produits est vide on affiche 'La liste est vide'
-        - Si il y a des elements dans la liste on affichera un tableau HTML (table) qui affichera tous les produits à l'aide du rendu de liste (boucle)
+    - Si la liste des produits est vide on affiche 'La liste est vide'
+    - Si il y a des elements dans la liste on affichera un tableau HTML (table) qui affichera tous les produits à l'aide du rendu de liste (boucle)
 
 4. Inclure le composant Produits dans le rendu du composant App
 
