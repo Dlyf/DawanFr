@@ -20,7 +20,7 @@
 9. Dans la balise Header on mettra une balise p avec n'importe quel chiffre
 10. Inserer le composant dans la div container
 
-11. Creer une classe composant, dont la fonction render reverra une div.
+11. Creer une classe composant **App**, dont la fonction render reverra une div.
 12. Dans cette div, on mettra une balise image, qui aura pour url, une chaine de caractere passé en props.
 13. Dans cette div, on mettra une balise div avec dedans:
 
