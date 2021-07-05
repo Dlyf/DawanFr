@@ -25,9 +25,35 @@ function ProductName(props) {
     return <p>Produit: { props.nom }</p>
 }
 
+function Personne(props) {
+    console.log(props.children);
+    return (
+        <p>
+            { props.children }
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, autem nobis! Commodi vero itaque iusto veniam facilis, excepturi eveniet error, est maxime, tempore dolor numquam porro. Aspernatur nemo nobis nihil!
+        </p>
+    );
+}
+
+class PersonneName extends React.Component  {
+    // Fait par defaut, par javascript
+    constructor(props) {
+        // Appelle le constructeur de la classe Mere ( Component(props) )
+        super(props);
+    }
+
+    render() {
+        return (
+            <div>
+                <p>Nom: { this.props.prenom }</p>
+            </div>
+        );
+    }
+}
+
 // Une classe composant. En javascript le mot clef extends permet l'héritage
 class App extends React.Component {
-    // constructor() {
+    // constructor(props) {
 
     // }
     render() {
@@ -37,6 +63,14 @@ class App extends React.Component {
                 <Product/>
                 <ProductName nom="banane" />
                 <ProductName nom="pomme" />
+                <Personne>
+                    <label htmlFor="age">Votre age</label>
+                    <input type="text" id="age" />
+                    <br/>
+                    <a href="#">plus d'information</a>
+                    <br/>
+                </Personne>
+                <PersonneName prenom="John"/>
             </div>
         );
     }
