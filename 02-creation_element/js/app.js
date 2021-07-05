@@ -16,12 +16,35 @@ ReactDOM.render(element, document.getElementById('root'));
 /**
  * <ul>
  *       <li>...</li>
+ *       <li class="li-iten">...</li>
+ *       <li id="li-1"> 
+ *          <a href="#">...</a>
+ *       </li>
  * </ul>
  */
 const listeElement = React.createElement("ul", {}, 
-    React.createElement('li', {}, 'Elephant'),
+    React.createElement('li', null, 'Elephant'),
     React.createElement('li', {className: 'li-item'}, 'Elan'),
     React.createElement('li', {id: 'li-1'}, React.createElement("a", {href: '#'}, 'Epervier'))
 );
 
 ReactDOM.render(listeElement, document.getElementById('root'));
+
+// Avec  du JSX
+const helloJSX = <h1>Hello World !</h1>;
+
+const listeElementJSX = (
+    <ul>
+        <li>Chien</li>
+        <li id="item1">Chat</li>
+        <li className="li-item"><a href="#">Chameau</a></li>
+    </ul>
+);
+
+ReactDOM.render(listeElementJSX, document.getElementById('root'));
+
+// const app = (
+//     <div>
+//         <p>...<p>
+//     </div>
+// );
