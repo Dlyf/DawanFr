@@ -24,7 +24,7 @@
 # Part 2
 
 
-6. A ce stade on se rend compte, que le composant Produits est trop complexe. On peut donc creer un composant nouveau Produit (singulier) qui sera en charge d'afficher un produit. 
+6. A ce stade on se rend compte, que le composant Produits est trop complexe. On peut donc creer un composant nouveau Produit (au singulier) qui sera en charge d'afficher un produit. 
 
 7. Creer une fonction composant Produit
 
