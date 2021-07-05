@@ -1,10 +1,10 @@
 # Exercice 2.2: Mise en pratique
 
    
-1. Créer un constante tout en haut du fichier, un tableau qui contient les produits de votre choix. Un produit est un objet avec un titre, une description et un prix.
+1. Créer un constante tout en haut du fichier, un tableau qui contient les produits de votre choix. Un produit est un objet avec un id, un titre, une description et un prix.
 
 ```
- {title: '', description '', price: 0}
+ {id: 1, title: '', description '', price: 0}
 ```
 
 2. Creer une classe composant Produits
