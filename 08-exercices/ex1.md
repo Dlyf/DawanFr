@@ -12,9 +12,9 @@
    
 3. Dans le HTML, Créer une div avec un id 'app' ou 'root'
 4. Dans index.js, Créer une classe composant App qui affichera une div vide pour le moment.
-8. Créer un constante tout en haut du fichier, avec les aliments de votre choix (riz, veste etc...) (Tableau de string)
+8. Créer un constante tout en haut du fichier, avec les aliments de votre choix (riz, pates etc...) (Tableau de string)
 5. Creer une fonction composant Aliments
-6. Dans le composant Aliments:
+6. Dans le composant Aliments:  
         - Si la liste des aliments est vide on affiche 'La liste est vide'
         - Si il y a des elements dans la liste on affichera une liste (ul) avec les aliments dedans.
 7. Inclure le composant Aliments dans le rendu du composant App
