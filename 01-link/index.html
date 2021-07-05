@@ -11,10 +11,13 @@
     <body>
         <h1>CDN:</h1>
         <div id="root">
-
         </div>
         <script>
-            // Creation d'un element HTML 
+            /* Creation d'un element HTML. React.createElement prend 3 paramètres
+             *    - Le nom de la balise HTML (a, p, div ...)
+             *    - Les attributs HTML sous forme d'objet  {src: 'https://...', alt: ''}
+             *    - Le contenu de la balise texte ou enfants
+             */ 
             const element = React.createElement("h2", {}, "Hello World !");
             console.dir(element);
             // Insertion de l'élément dans le DOM
