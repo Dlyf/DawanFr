@@ -10,10 +10,25 @@ function shouldPrint(isOk) {
     }
 }
 
+class WelcomePage extends React.Component {
+    // constructor(props) { super(props) }
+    render() {
+        // if (this.props.isLogged == true)
+        if (this.props.isLogged) {
+            return <p>Bienvenue sur ma page</p>
+        } else {
+            return <p>Vous devez etre connecter pour voir cette page</p>
+        }
+    }
+}
+
 function App() {
     const isOk = true;
     return (
         <React.Fragment>
+            <h2>Avec le composant</h2>
+            <WelcomePage isLogged={false} />
+
             <h2>Avec fonction</h2>
             {
                 shouldPrint(isOk)
