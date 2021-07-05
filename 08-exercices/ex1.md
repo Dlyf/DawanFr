@@ -15,7 +15,7 @@
 8. Créer un constante tout en haut du fichier, avec les aliments de votre choix (riz, pates etc...) (Tableau de string)
 5. Creer une fonction composant Aliments
 6. Dans le composant Aliments:  
-        - Si la liste des aliments est vide on affiche 'La liste est vide'
-        - Si il y a des elements dans la liste on affichera une liste (ul) avec les aliments dedans.
+  - Si la liste des aliments est vide on affiche 'La liste est vide'
+  - Si il y a des elements dans la liste on affichera une liste (ul) avec les aliments dedans.
 7. Inclure le composant Aliments dans le rendu du composant App
 8. Vous pouvez styliser le tout avec bootstrap si vous le voulez.
