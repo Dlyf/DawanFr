@@ -1,7 +1,7 @@
 function Header(props) {
     return (
-        <header>
-            <h1 style={props.monStyle}>{ props.titre }</h1>
+        <header style={props.monStyle}>
+            <h1 >{ props.titre }</h1>
             <i className="fas fa-shopping-cart"></i>
             <p>0</p>
             <img src={props.imgSrc}/>
