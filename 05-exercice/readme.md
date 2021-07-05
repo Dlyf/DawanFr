@@ -18,15 +18,14 @@
 7. Dans la balise Header on mettra un titre h1
 8. Dans la balise Header on mettra et un logo bookmark ou [une autre icone](https://fontawesome.com/icons?d=gallery)
 9. Dans la balise Header on mettra une balise p avec n'importe quel chiffre
-10. Inserer le composant dans la div container
 
-11. Creer une classe composant **App**, dont la fonction render reverra une div.
-12. Dans cette div, on mettra une balise image, qui aura pour url, une chaine de caractere passé en props.
-13. Dans cette div, on mettra une balise div avec dedans:
+10. Creer une classe composant **App**, dont la fonction render reverra une div.
+11. Dans cette div, on mettra une balise image, qui aura pour url, une chaine de caractere passé en props.
+12. Dans cette div, on mettra une balise div avec dedans:
 
         - Un h2 pour le texte on utilisera les props. (title pour le nom par exemple)
         - Un p  pour le texte on utilisera les props. (overview pour le nom par exemple)
         - une div avec dedans un lien qui contiendra le texte 'voir plus'
 
 
-14. Inserer le composant dans le rendu de **App** , avec les attributs necessaire pour afficher les props
+13. Inserer le composant Header dans le rendu de **App** , avec les attributs necessaire pour afficher les props
