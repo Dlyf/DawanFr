@@ -26,8 +26,6 @@ function App() {
     const isOk = true;
     return (
         <React.Fragment>
-            <h2>Avec le composant</h2>
-            <WelcomePage isLogged={false} />
 
             <h2>Avec fonction</h2>
             {
@@ -45,6 +43,9 @@ function App() {
                     : 
                     <a href="#">Revenir a l'accueil</a>
             }
+
+            <h2>Avec le composant</h2>
+            <WelcomePage isLogged={false} />
         </React.Fragment>
     );
 }
