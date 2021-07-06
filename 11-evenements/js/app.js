@@ -4,6 +4,7 @@ class App extends React.Component {
     //     this.state = { }
     // }
     state = {
+        prenom: 'John',
         prenoms: ['John', 'Maude', 'Ella', 'Rick']
     }
 
@@ -27,9 +28,21 @@ class App extends React.Component {
     // transmitGetId() {
     //     this.getId(5)
     // }
+
+    changerPrenom() {
+        console.log(this);
+        // on ne modifie jamais le state directement
+        // this.state.prenoms[0] = "Maude"
+        const nouveauState = {
+            prenom: 'Yohann'
+        }
+        this.setState(nouveauState);
+    }
+
     render() {
         return (
             <div>
+                <p>{this.state.prenom}</p>
                 {/* pas de parentheses lors de l'appel */}
                 <button onClick={this.sayHello}>Dire Bonjour</button>
                 <button onClick={this.afficherEvent}>Afficher Evenement</button>
@@ -42,6 +55,7 @@ class App extends React.Component {
                  */}
                 <button onClick={() => this.getId(5)}>Recuperer Id</button>
                 {/* <button onClick={this.transmitGetId}>Recuperer Id</button> */}
+                <button onClick={() => this.changerPrenom()}>Changer le nom</button>
             </div>
         );
     }
