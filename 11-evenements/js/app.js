@@ -1,3 +1,40 @@
+class ThisReference extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        }
+        this.afficherNomBinding = this.afficherNomBinding.bind(this);
+    }
+    afficherNom() {
+        console.log(this);
+    }
+
+    afficherNomBinding() {
+        console.log(this);
+    }
+
+    afficherNomFlechee = () => {
+        console.log(this);
+    }
+    
+    render() {
+        return (
+            <div style={{backgroundColor: 'wheat', padding: '10px'}}>
+                <p>
+                    Lorsqu'on clique sur le bouton, la fonction aficherNom perd son contexte, 
+                    et utilise celui de la fonction onClick
+                </p>
+                <button onClick={this.afficherNom}>Perte de contexte</button>
+                {/* Les fonctions flechée permettent de garder le contexte, elles ont été faites pour ca */}
+                <button onClick={() => this.afficherNom()}>Garde le contexte (1)</button>
+                <button onClick={this.afficherNomBinding}>Garde le contexte (2)</button>
+                <button onClick={this.afficherNomFlechee}>Garde le contexte (3)</button>
+            </div>
+        );
+    }
+}
+
 class App extends React.Component {
     // constructor(props) {
     //     super(props);
@@ -62,6 +99,7 @@ class App extends React.Component {
                 <button onClick={() => this.getId(5)}>Recuperer Id</button>
                 {/* <button onClick={this.transmitGetId}>Recuperer Id</button> */}
                 <button onClick={() => this.changerPrenom()}>Changer le nom</button>
+                <ThisReference/>
             </div>
         );
     }
