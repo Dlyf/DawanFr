@@ -22,7 +22,7 @@ const produits = [
 
 function Produit(props) {
    return (
-      <tr key={props.id}>
+      <tr>
          <td>{props.id}</td>
          <td>{props.title}</td>
          <td>{props.price}</td>
@@ -35,6 +35,7 @@ function Produits() {
    function createTableRow(produit) {
       // return <Produit {...produit}/>
       return <Produit 
+         key={produit.id}
          id={produit.id} 
          title={produit.title} 
          price={produit.price} 
@@ -57,7 +58,8 @@ function Produits() {
                   </tr>
                </thead>
                <tbody>
-                    { produits.map(createTableRow) }
+                    {/* { produits.filter(p=>p.title.includes('a')).map(createTableRow)} */}
+                    { produits.map(createTableRow)}
                </tbody>
             </table>
          }
