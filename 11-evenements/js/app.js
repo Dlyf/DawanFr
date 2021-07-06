@@ -33,8 +33,14 @@ class App extends React.Component {
         console.log(this);
         // on ne modifie jamais le state directement
         // this.state.prenoms[0] = "Maude"
+
+        // On doit copier les objets modifiables (comme les tableaux) avant des les modifier
+        const nouveauTableau = [...this.state.prenoms];
+        nouveauTableau[0] = "Rick";
+    
         const nouveauState = {
-            prenom: 'Yohann'
+            prenom: 'Yohann',
+            prenoms: nouveauTableau
         }
         this.setState(nouveauState);
     }
