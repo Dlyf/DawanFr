@@ -40,10 +40,12 @@ class App extends React.Component {
                 <ul>
                     { this.createPrenomsArray() }
                 </ul>
+
                 <h2>Avec la methode map</h2>
                 <ol>
                     {
                         prenoms.map(function (prenom, index) {
+                            {/* key=0jerry,  key=1jerry */}
                             return <li key={index+prenom}>{prenom}</li>
                         })
                     }
