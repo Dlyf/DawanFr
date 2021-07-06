@@ -16,7 +16,8 @@ class App extends React.Component {
                 'Summer',
                 'Jerry',
                 'Morty'
-            ]
+            ],
+            message: 'Hello World !'
         }
     }
     render() {
@@ -28,6 +29,7 @@ class App extends React.Component {
                         this.state.prenoms.map((p,i) => <li key={p+i}>{p}</li>)
                     }
                 </ul>
+                <p>{this.state.message}</p>
             </React.Fragment>
         );
     }
