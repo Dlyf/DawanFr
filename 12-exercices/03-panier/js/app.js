@@ -8,7 +8,7 @@ function ProduitPanier(props) {
           <td>{title}</td>
           <td>{price}</td>
           <td>
-            <button onClick={() => props.myEditQuantite(id, 1) } className="btn btn-dark"> + </button>
+            <button onClick={() => props.myEditQuantite(id, 1, true) } className="btn btn-dark"> + </button>
             <span>{quantity}</span>
             <button onClick={() => props.myEditQuantite(id, -1) } className="btn btn-dark"> - </button>
           </td>
@@ -29,7 +29,7 @@ class Panier extends React.Component {
         ]
     }
 
-    editQuantite = (id, newQuantity) => {
+    editQuantite = (id, newQuantity, increment=false) => {
         console.log("ID: " + id);
         const nouveauxProduit = [...this.state.produitPanier];
         // let index = -1;
@@ -40,7 +40,7 @@ class Panier extends React.Component {
         // }
         const index = nouveauxProduit.findIndex(produit => produit.id == id);
         const produit = nouveauxProduit[index];
-        produit.quantity += newQuantity;
+        produit.quantity += increment ? newQuantity : 0;
         this.setState({
             produitPanier: nouveauxProduit
         })
