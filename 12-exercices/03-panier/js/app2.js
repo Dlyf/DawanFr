@@ -1,25 +1,3 @@
-function ProduitPanier(props) {
-    // const id = props.id;
-    // const title = props.title;
-    const {id, title, price, quantity} = props;
-    return (
-       <tr>
-          <td>{id}</td>
-          <td>{title}</td>
-          <td>{price}</td>
-          <td>
-            <button onClick={() => props.myEditQuantite(id, 1) } className="btn btn-dark"> + </button>
-            <span>{quantity}</span>
-            <button onClick={() => props.myEditQuantite(id, -1) } className="btn btn-dark"> - </button>
-          </td>
-          <td>
-              
-              <button className="btn btn-dark">X</button>
-          </td>
-       </tr>
-    );
-}
-
 class Panier extends React.Component {
     state = {
         produitPanier: [
@@ -29,19 +7,22 @@ class Panier extends React.Component {
         ]
     }
 
-    editQuantite = (id, newQuantity, increment=false) => {
-        console.log("ID: " + id);
+    incrementer = (id,) => {
         const nouveauxProduit = [...this.state.produitPanier];
-        // let index = -1;
-        // for (let i = 0,; i < nouveauxProduit.length; i++) {
-        //     if (nouveauxProduit[i].id == id) {
-        //         index = i;
-        //     }
-        // }
         const index = nouveauxProduit.findIndex(produit => produit.id == id);
         const produit = nouveauxProduit[index];
-        if (produit.quantity + newQuantity > -1) {
-            produit.quantity += newQuantity
+        produit.quantity += 1
+        this.setState({
+            produitPanier: nouveauxProduit
+        })
+    }
+
+    decrementer = (id) => {
+        const nouveauxProduit = [...this.state.produitPanier];
+        const index = nouveauxProduit.findIndex(produit => produit.id == id);
+        const produit = nouveauxProduit[index];
+        if (produit.quantity > 1) {
+            produit.quantity -= 1
         }
         this.setState({
             produitPanier: nouveauxProduit
@@ -49,14 +30,21 @@ class Panier extends React.Component {
     }
 
     createProductRow = (produit) => {
-        return <ProduitPanier 
-           key={produit.id}
-           id={produit.id} 
-           title={produit.title} 
-           quantity={produit.quantity} 
-           price={produit.price}
-           myEditQuantite={this.editQuantite}
-           />;
+        return (<tr key={produit.id}>
+            <td>{produit.id}</td>
+            <td>{produit.title}</td>
+            <td>{produit.price}</td>
+            <td>
+                <button onClick={() => this.decrementer(produit.id) } className="btn btn-dark"> - </button>
+                <span>{produit.quantity}</span>
+                <button onClick={() => this.incrementer(produit.id) } className="btn btn-dark"> + </button>
+            </td>
+            <td>
+                
+                <button className="btn btn-dark">X</button>
+            </td>
+        </tr>
+        );
      }
 
     render() {
