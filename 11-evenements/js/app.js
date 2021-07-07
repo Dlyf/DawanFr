@@ -9,9 +9,10 @@ class ThisReference extends React.Component {
     afficherNom() {
         console.log(this);
     }
-
+    
     afficherNomBinding() {
         console.log(this);
+        this.props.editPrenom('Jerry');
     }
 
     afficherNomFlechee = () => {
@@ -66,6 +67,10 @@ class App extends React.Component {
     //     this.getId(5)
     // }
 
+    changerNom = (prenom) => {
+        this.setState({prenom: prenom})
+    }
+
     changerPrenom() {
         console.log(this);
         // on ne modifie jamais le state directement
@@ -99,7 +104,7 @@ class App extends React.Component {
                 <button onClick={() => this.getId(5)}>Recuperer Id</button>
                 {/* <button onClick={this.transmitGetId}>Recuperer Id</button> */}
                 <button onClick={() => this.changerPrenom()}>Changer le nom</button>
-                <ThisReference/>
+                <ThisReference editPrenom={this.changerNom}/>
             </div>
         );
     }
