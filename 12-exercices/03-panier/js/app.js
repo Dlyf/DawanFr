@@ -8,13 +8,13 @@ function ProduitPanier(props) {
           <td>{title}</td>
           <td>{price}</td>
           <td>
-            <button> + </button>
+            <button onClick={() => props.myEditQuantite(id, 1) } className="btn btn-dark"> + </button>
             <span>{quantity}</span>
-            <button> - </button>
+            <button onClick={() => props.myEditQuantite(id, -1) } className="btn btn-dark"> - </button>
           </td>
           <td>
               
-              <button>X</button>
+              <button className="btn btn-dark">X</button>
           </td>
        </tr>
     );
@@ -23,19 +23,37 @@ function ProduitPanier(props) {
 class Panier extends React.Component {
     state = {
         produitPanier: [
-            {id: 1, title: 'Lorem', price: 72.0, quantity: 1},
-            {id: 2, title: 'Ipsum', price: 45, quantity: 1},
-            {id: 3, title: 'Dolor', price: 32.0, quantity: 1},
+            {id: 105, title: 'Lorem', price: 72.0, quantity: 1},
+            {id: 206, title: 'Ipsum', price: 45, quantity: 1},
+            {id: 207, title: 'Dolor', price: 32.0, quantity: 1},
         ]
     }
 
-    createProductTable(produit) {
+    editQuantite = (id, newQuantity) => {
+        console.log("ID: " + id);
+        const nouveauxProduit = [...this.state.produitPanier];
+        // let index = -1;
+        // for (let i = 0,; i < nouveauxProduit.length; i++) {
+        //     if (nouveauxProduit[i].id == id) {
+        //         index = i;
+        //     }
+        // }
+        const index = nouveauxProduit.findIndex(produit => produit.id == id);
+        const produit = nouveauxProduit[index];
+        produit.quantity += newQuantity;
+        this.setState({
+            produitPanier: nouveauxProduit
+        })
+    }
+
+    createProductRow = (produit) => {
         return <ProduitPanier 
            key={produit.id}
            id={produit.id} 
            title={produit.title} 
            quantity={produit.quantity} 
            price={produit.price}
+           myEditQuantite={this.editQuantite}
            />;
      }
 
@@ -44,19 +62,19 @@ class Panier extends React.Component {
             <React.Fragment>
                 {
                     (!this.state.produitPanier.length) ? <p>La liste est vide.</p> : 
-                    <table border="1">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nom</th>
-                            <th>Prix</th>
-                            <th>Quantite</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                            { this.state.produitPanier.map(this.createProductTable)}
-                    </tbody>
+                    <table  className="table table-striped table-hover">
+                        <thead className="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Nom</th>
+                                <th>Prix</th>
+                                <th>Quantite</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                { this.state.produitPanier.map(this.createProductRow)}
+                        </tbody>
                     </table>
                 }
             </React.Fragment>
