@@ -1,3 +1,18 @@
+let a = {
+    nom: '',
+    getNom: function () { 
+        console.log(this.nom) 
+    },
+    onClick: {
+        getNom: function() {
+            console.log(this.nom)
+        }
+    }
+}
+
+a.getNom();
+a.onClick.getNom();
+
 class ThisReference extends React.Component {
     constructor(props) {
         super(props);
@@ -15,6 +30,7 @@ class ThisReference extends React.Component {
         this.props.editPrenom('Jerry');
     }
 
+    // Les fonctions flechée bind automatiquement le contexte
     afficherNomFlechee = () => {
         console.log(this);
     }
