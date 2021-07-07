@@ -29,6 +29,18 @@ class Panier extends React.Component {
         })
     }
 
+    retirerProduit(id) {
+        // const nouveauxProduit = this.state.produitPanier.filter(p => p.id != id);
+
+        const nouveauxProduit = [...this.state.produitPanier];
+        const index = copyProduit.findIndex(produit => produit.id == id);
+        copyProduit.splice(index, 1);
+
+        this.setState({
+            produitPanier: nouveauxProduit
+        })
+    }
+
     createProductRow = (produit) => {
         return (<tr key={produit.id}>
             <td>{produit.id}</td>
@@ -41,7 +53,7 @@ class Panier extends React.Component {
             </td>
             <td>
                 
-                <button className="btn btn-dark">X</button>
+                <button className="btn btn-dark" onClick={() => this.retirerProduit(produit.id) }>X</button>
             </td>
         </tr>
         );
