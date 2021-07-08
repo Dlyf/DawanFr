@@ -7,9 +7,10 @@ function Card(props) {
     console.log(styles);
     return (
         <React.Fragment>
-            <div className={styles.card}>
+            <div className={styles.card + ' alert alert-success'}>
                 <p>Card !</p>
                 <p className='test'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque voluptatum in exercitationem iure aspernatur deleniti hic quod consequuntur dolore dicta obcaecati dolores repudiandae cupiditate labore ut esse culpa, nam rerum?</p>
+                <button className="btn btn-dark">Bootstrap !!!</button>
             </div>
         </React.Fragment>
     );
