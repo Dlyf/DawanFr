@@ -1,10 +1,12 @@
 import { BrowserRouter } from 'react-router-dom';
+import Navigation from './components/Navigation';
 import Routes from './router/Routes';
 
 function App() {
   return (
     <div className="App">
         <BrowserRouter>
+            <Navigation/>
             <Routes/>
         </BrowserRouter>
     </div>

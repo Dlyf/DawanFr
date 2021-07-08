@@ -1,0 +1,8 @@
+/* La balise Link correspond à une balise <a></a> */
+a {
+    text-decoration: none;
+}
+
+.active {
+    color: brown;
+}

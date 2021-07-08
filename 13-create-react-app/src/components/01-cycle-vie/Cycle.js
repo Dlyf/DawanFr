@@ -7,6 +7,7 @@ class CycleVie extends Component {
             date: new Date(),
             message: 'Salut'
         };
+        this.timer = null;
     }
 
     updateDate = () => {
@@ -16,7 +17,7 @@ class CycleVie extends Component {
     componentDidMount() {
         console.log("Composant Monté");
         // setInterval: execute la callback, toutes les x millisecondes
-        setInterval(this.updateDate, 1000)
+        this.timer = setInterval(this.updateDate, 1000)
     }
 
     componentDidUpdate(ancienneProps, ancienState) {
@@ -27,7 +28,8 @@ class CycleVie extends Component {
      }
 
     componentWillUnmount() {
-        console.log("Demontage du composant");
+        console.log("Démontage du composant");
+        clearInterval(this.timer);
     }
     
     render() {
