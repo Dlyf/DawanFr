@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch} from 'react-router-dom';
 import Title from '../components/Title';
 import CycleVie from '../components/01-cycle-vie/Cycle';
+import Params from '../components/04-react-router/Params';
 
 function Routes(props) {
     return (
@@ -11,6 +12,7 @@ function Routes(props) {
         <Switch>
             <Route exact path="/" component={Title}/>
             <Route path="/life-cycle" component={CycleVie} />
+            <Route path="/params/:titre" component={Params}/>
         </Switch>
     );
 }
