@@ -7,6 +7,7 @@ import GoBack from '../components/04-react-router/GoBack';
 import NotFound from '../components/04-react-router/NotFound';
 import Login from '../components/04-react-router/Login';
 import Admin from '../components/04-react-router/Admin';
+import Protected from '../components/04-react-router/Protected.route';
 
 function Routes(props) {
     return (
@@ -19,7 +20,7 @@ function Routes(props) {
             <Route path="/params/:titre" component={Params}/>
             <Route path="/back" component={GoBack}/>
             <Route path="/login" component={Login}/>
-            <Route path="/admin" component={Admin}/>
+            <Protected path="/admin" component={Admin}/>
             <Route path="*" component={NotFound}/>
         </Switch>
     );
