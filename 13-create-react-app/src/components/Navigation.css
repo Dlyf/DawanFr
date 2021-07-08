@@ -1,8 +1,13 @@
 /* La balise Link correspond à une balise <a></a> */
-a {
+nav a {
+    display: inline-block;
     text-decoration: none;
+    padding: 10px;
+    color: brown;
+    border-radius: 5px;
 }
 
 .active {
-    color: brown;
+    background-color: brown;
+    color: white;
 }

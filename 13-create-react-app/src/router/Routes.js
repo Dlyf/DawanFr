@@ -4,6 +4,7 @@ import Title from '../components/Title';
 import CycleVie from '../components/01-cycle-vie/Cycle';
 import Params from '../components/04-react-router/Params';
 import GoBack from '../components/04-react-router/GoBack';
+import NotFound from '../components/04-react-router/NotFound';
 
 function Routes(props) {
     return (
@@ -15,6 +16,7 @@ function Routes(props) {
             <Route path="/life-cycle" component={CycleVie} />
             <Route path="/params/:titre" component={Params}/>
             <Route path="/back" component={GoBack}/>
+            <Route path="*" component={NotFound}/>
         </Switch>
     );
 }
