@@ -7,7 +7,10 @@ function ChildCompteur(props) {
             <h2>
                 Child Compteur: {props.myValeur}
             </h2>
-            <DeepChild/>
+            <DeepChild 
+                childIncrementer={props.myIncrementer}  
+                childValeur={props.myValeur}    
+            />
         </React.Fragment>
     );
 }

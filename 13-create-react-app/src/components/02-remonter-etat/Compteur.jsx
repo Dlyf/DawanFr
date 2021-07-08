@@ -8,13 +8,22 @@ class Compteur extends React.Component {
             compteur: 0
         };
     }
+
+    incrementer = () => {
+        let compteur = this.state.compteur + 1;
+        this.setState({compteur})
+    }
+
     render() {
         return(
             <>
                 <h1>
                     Compteur: { this.state.compteur}
                 </h1>
-                <ChildCompteur myValeur={this.state.compteur}/>
+                <ChildCompteur 
+                    myValeur={this.state.compteur} 
+                    myIncrementer={this.incrementer}
+                />
             </>
         );
     }
