@@ -2,12 +2,22 @@
 nav a {
     display: inline-block;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px 10px;
     color: brown;
     border-radius: 5px;
+    border: 1px solid brown;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: brown;
 }
 
 .active {
     background-color: brown;
+    color: white;
+}
+
+nav a.active:hover {
     color: white;
 }

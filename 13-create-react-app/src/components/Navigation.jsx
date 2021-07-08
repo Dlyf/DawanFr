@@ -12,13 +12,13 @@ function Navigation(props) {
             */}
             <NavLink exact to="/">
                 Accueil
-            </NavLink> | 
+            </NavLink>
             <NavLink to="/life-cycle">
                 Cycle de vie
-            </NavLink>| 
+            </NavLink>
             <NavLink to="/params/avatar">
                 Params
-            </NavLink> | 
+            </NavLink>
             <NavLink to="/back">
                 Retour
             </NavLink>
