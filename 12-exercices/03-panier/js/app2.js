@@ -7,7 +7,7 @@ class Panier extends React.Component {
         ]
     }
 
-    incrementer = (id,) => {
+    incrementer = (id) => {
         const nouveauxProduit = [...this.state.produitPanier];
         const index = nouveauxProduit.findIndex(produit => produit.id == id);
         const produit = nouveauxProduit[index];
