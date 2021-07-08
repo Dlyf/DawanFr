@@ -10,7 +10,7 @@ function Protected(props) {
             path={props.path}
             component={() => {
                 if (user != null) {
-                    return <Component />
+                    return <Component {...props}/>
                 } else {
                     return <Redirect to="/login" />
                 }
