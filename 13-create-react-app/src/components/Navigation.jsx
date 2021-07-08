@@ -22,6 +22,12 @@ function Navigation(props) {
             <NavLink to="/back">
                 Retour
             </NavLink>
+            <NavLink to="/login">
+                Connexion
+            </NavLink>
+            <NavLink to="/admin">
+                Administration
+            </NavLink>
         </nav>
     );
 }

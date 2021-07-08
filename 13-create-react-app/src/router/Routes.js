@@ -5,6 +5,8 @@ import CycleVie from '../components/01-cycle-vie/Cycle';
 import Params from '../components/04-react-router/Params';
 import GoBack from '../components/04-react-router/GoBack';
 import NotFound from '../components/04-react-router/NotFound';
+import Login from '../components/04-react-router/Login';
+import Admin from '../components/04-react-router/Admin';
 
 function Routes(props) {
     return (
@@ -16,6 +18,8 @@ function Routes(props) {
             <Route path="/life-cycle" component={CycleVie} />
             <Route path="/params/:titre" component={Params}/>
             <Route path="/back" component={GoBack}/>
+            <Route path="/login" component={Login}/>
+            <Route path="/admin" component={Admin}/>
             <Route path="*" component={NotFound}/>
         </Switch>
     );
