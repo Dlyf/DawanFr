@@ -3,6 +3,7 @@ import { Route, Switch} from 'react-router-dom';
 import Title from '../components/Title';
 import CycleVie from '../components/01-cycle-vie/Cycle';
 import Params from '../components/04-react-router/Params';
+import GoBack from '../components/04-react-router/GoBack';
 
 function Routes(props) {
     return (
@@ -13,6 +14,7 @@ function Routes(props) {
             <Route exact path="/" component={Title}/>
             <Route path="/life-cycle" component={CycleVie} />
             <Route path="/params/:titre" component={Params}/>
+            <Route path="/back" component={GoBack}/>
         </Switch>
     );
 }

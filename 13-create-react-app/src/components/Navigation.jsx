@@ -18,6 +18,9 @@ function Navigation(props) {
             </NavLink>| 
             <NavLink to="/params/avatar">
                 Params
+            </NavLink> | 
+            <NavLink to="/back">
+                Retour
             </NavLink>
         </nav>
     );
