@@ -23,6 +23,7 @@ function countReducer(state=etatInitial, action) {
             // copie le state
             const nouveauxState = {...state};
             nouveauxState.compteur++;
+            console.log(nouveauxState);
             return nouveauxState;
         case 'decrementer':
             break;
