@@ -9,13 +9,26 @@ class Formulaire extends React.Component {
             email: '',
             age: 0,
             city: '',
-            cgu: true
+            cgu: true,
+            formErrors: {
+                nom: '',
+                prenom: ''
+            }
         };
     }
 
     changerNom = (event) => {
-        this.setState({
-            nom: event.target.value
+        let errorMsg = '';
+        if (event.target.value.length < 2) {
+            errorMsg = 'Le nom doit faire 2 caractères minimum'
+        }
+        const copyErrors = {...this.state.formErrors};
+        this.setState({ 
+            nom: event.target.value,
+            formErrors: {
+                ...copyErrors,
+                nom: errorMsg
+            }
         })
     }
 
@@ -53,6 +66,7 @@ class Formulaire extends React.Component {
                         <label htmlFor="name">Nom</label>
                         {/* le champ devient controlé par React */}
                         <input value={this.state.nom} onChange={this.changerNom} type="text" name="name" id="name" className="form-control"/>
+                        <p>{ this.state.formErrors.nom }</p>
                     </div>
                     <div className="form-group">
                         <label htmlFor="firstname">Prenom</label>
