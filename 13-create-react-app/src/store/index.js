@@ -35,7 +35,7 @@ function countReducer(state=etatInitial, action) {
         case 'incrementerX':
             return {
                 ...state,
-                compteur: action.payload
+                compteur: state.compteur + action.payload
             }
         case 'reset':
             break;
