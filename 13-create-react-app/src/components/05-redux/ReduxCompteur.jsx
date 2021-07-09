@@ -67,7 +67,9 @@ function mapDispatchToProps(dispatch) {
                 }
             }
             dispatch(action) 
-        }
+        },
+        dispatch
+        // dispatch: dispatch
     }
 };
 

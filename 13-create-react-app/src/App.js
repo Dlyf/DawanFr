@@ -7,7 +7,7 @@ import store from './store';
 function App() {
   return (
     <div className="App">
-        {/* Le store est maintenant accessible partout dans l'application */}
+    {/* Le store est maintenant accessible partout dans l'application */}
         <Provider store={store}>
           <BrowserRouter>
               <Navigation/>
