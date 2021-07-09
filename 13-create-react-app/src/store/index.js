@@ -18,16 +18,25 @@ const etatInitial = {
  * } 
  */
 function countReducer(state=etatInitial, action) {
+    
     switch(action.type) {
         case 'incrementer':
-            // toujours copier le state avant modification
             const nouveauxState = {...state};
+            // toujours copier le state avant modification
             nouveauxState.compteur++;
             // nouveauxState.compteur = action.payload
             console.log(nouveauxState);
             return nouveauxState;
         case 'decrementer':
-            break;
+            return {
+                ...state,
+                compteur: state.compteur - 1 
+            }
+        case 'incrementerX':
+            return {
+                ...state,
+                compteur: action.payload
+            }
         case 'reset':
             break;
         default:
