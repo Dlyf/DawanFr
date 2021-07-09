@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Time from './Time';
+import useSearch from './useSearch';
 
 /**
  * Le hook d'etat permet de creer un etat local dans des fonctions composants (ne fonctionne pas avec les classes)
@@ -14,6 +15,9 @@ function Hook(props) {
     // const setCompteur = compteurState[1];
     const [compteur, setCompteur] = useState(0);
     const [recherche, setRecherche] = useState('');
+    
+    // On peut recuper seulement la fonction si on le veut
+    const onSearch = useSearch('')[1];
 
     return (
         <React.Fragment>
@@ -25,6 +29,7 @@ function Hook(props) {
             <input type="text" placeholder="Rechercher" onChange={
                 (event) => {
                     setRecherche(event.target.value);
+                    onSearch(event.target.value);
                 }
             }/>
             <hr/>
