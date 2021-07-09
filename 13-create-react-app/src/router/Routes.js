@@ -11,6 +11,7 @@ import Protected from '../components/04-react-router/Protected.route';
 import ReduxCompteur from '../components/05-redux/ReduxCompteur';
 import ReactCompteur from '../components/05-redux/ReactCompteur';
 import Hook from '../components/06-hooks/Hook';
+import Formulaire from '../components/07-formulaire/Form';
 
 function Routes(props) {
     return (
@@ -27,6 +28,7 @@ function Routes(props) {
             <Route path="/react" component={ReactCompteur}/>
             <Route path="/redux" component={ReduxCompteur}/>
             <Route path="/hooks" component={Hook}/>
+            <Route path="/forms" component={Formulaire}/>
             <Protected path="/admin" component={Admin}/>
             <Route path="*" component={NotFound}/>
         </Switch>
