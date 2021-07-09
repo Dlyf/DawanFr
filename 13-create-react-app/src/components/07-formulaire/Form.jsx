@@ -8,18 +8,19 @@ class Formulaire extends React.Component {
             prenom: '',
             email: '',
             age: 0,
+            city: '',
         };
     }
 
     changerNom = (event) => {
         this.setState({
-            prenom: event.target.value
+            nom: event.target.value
         })
     }
 
     changerPrenom = (event) => {
         this.setState({
-            nom: event.target.value
+            prenom: event.target.value
         })
     }
 
@@ -37,7 +38,7 @@ class Formulaire extends React.Component {
 
     render() {
         return(
-            <>
+            <div className="container">
                 <form onSubmit={this.onSubmitHandler}>
                     <div className="form-group">
                         <label htmlFor="name">Nom</label>
@@ -46,7 +47,7 @@ class Formulaire extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="firstname">Prenom</label>
-                        <input value={this.state.prenom} onChange={this.onChangeHanlder} type="text" name="firstname" id="name" className="form-control"/>
+                        <input value={this.state.prenom} onChange={this.changerPrenom} type="text" name="firstname" id="name" className="form-control"/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
@@ -56,9 +57,19 @@ class Formulaire extends React.Component {
                         <label htmlFor="age">Age</label>
                         <input value={this.state.age} onChange={this.onChangeHanlder} type="number" name="age" id="age" className="form-control"/>
                     </div>
+
+                    <div>
+                        <label htmlFor="cities">Ville</label>
+                        <select onChange={this.onChangeHanlder} className="form-control form-control-lg" name="city" id="cities">
+                            <option>Paris</option>
+                            <option>Rennes</option>
+                            <option>Nantes</option>
+                            <option>Lyon</option>
+                        </select>
+                    </div>
                     <input type="submit" value="Valider" className="btn btn-success"/>
                 </form>
-            </>
+            </div>
         );
     }
 }
