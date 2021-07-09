@@ -28,6 +28,15 @@ function Navigation(props) {
             <NavLink to="/admin">
                 Administration
             </NavLink>
+            <NavLink to="/react">
+                Compteur React
+            </NavLink>
+            <NavLink to="/redux">
+                Compteur Redux
+            </NavLink>
+            <NavLink to="/hooks">
+                Hook
+            </NavLink>
         </nav>
     );
 }
