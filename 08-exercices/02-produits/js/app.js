@@ -27,9 +27,6 @@ function Produit(props) {
          <td>{props.title}</td>
          <td>{props.price}</td>
          <td>{props.description}</td>
-         <td>
-            <p>This is a tooltip <TooltipTrigger tooltip={TooltipContent}>example</TooltipTrigger>!</p>
-         </td>
       </tr>
    );
 }
