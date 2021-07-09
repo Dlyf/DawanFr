@@ -90,12 +90,23 @@ class Formulaire extends React.Component {
                             <option>Lyon</option>
                         </select>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                         <input onChange={this.onChangeHanlder} value={this.state.cgu}  name="cgu" className="form-check-input" type="checkbox" id="cgu" />
-                        <label className="form-check-label" for="cgu">
+                        <label className="form-check-label" htmlFor="cgu">
                             J'accepte les Conditions Générales d'Utilisation
                         </label>
                     </div>
+                    <div className="form-check">
+                        <input onChange={this.onChangeHanlder} value={this.state.cgu}  name="cgu" className="form-check-input" type="checkbox" id="cgu" />
+                        <label className="form-check-label" htmlFor="cgu">
+                            Se souvenir de moi
+                        </label>
+                    </div>
+                    {/* 
+                        Attention, dès que l'on utilise l'attribut value, le champ devient controlé par react
+                     */}
+                    {/* <input type="text" value="Salut !"/> */}
+                    <input type="text" defaultValue="John"/>
                     <input type="submit" value="Valider" className="btn btn-success"/>
                 </form>
             </div>
