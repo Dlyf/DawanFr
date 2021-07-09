@@ -1,0 +1,87 @@
+.quantity-form {
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+.value-button:hover {
+    cursor: pointer;
+}
+  
+.quantity-form .decrease {
+    margin-right: -5px;
+    border-radius: 8px 0 0 8px;
+}
+  
+.quantity-form .increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+  
+.quantity-form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+}
+  
+.card-input {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #922c88;
+    border-bottom: 1px solid #922c88;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+}
+  
+.card-input::-webkit-inner-spin-button,
+.card-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.card-input::-webkit-outer-spin-button,
+.card-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.card-input {
+  -moz-appearance: textfield;
+}
+
+.btn {
+    border: none;
+    background-color: #922c88;
+    border: 1px solid #922c88;
+    /* background: linear-gradient(to left, #FF8383, #DC01D5); */
+    color: white;
+    font-weight: bold;
+}
+
+.btn:active {
+    background: linear-gradient(to left, #DC01D5, #FF8383);
+    box-shadow: 0 0 5px white;
+    transform: scale(0.95);
+}
