@@ -2,7 +2,7 @@
 import { createStore } from 'redux';
 
 const etatInitial = {
-    compteur: 0,
+    compteur: 0
 }
 
 /**
@@ -14,15 +14,16 @@ const etatInitial = {
  *   - le type d'action (string)
  * const action = {
  *      type: 'incrementer',
- *      payload: 1
+ *      payload: 2
  * } 
  */
 function countReducer(state=etatInitial, action) {
     switch(action.type) {
         case 'incrementer':
-            // copie le state
+            // toujours copier le state avant modification
             const nouveauxState = {...state};
             nouveauxState.compteur++;
+            // nouveauxState.compteur = action.payload
             console.log(nouveauxState);
             return nouveauxState;
         case 'decrementer':
