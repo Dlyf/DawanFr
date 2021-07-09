@@ -1,42 +1,47 @@
 import React, { useEffect, useState } from 'react';
 
-function sameAsComponentDidMount() {
-    /*
-         Equivalent a componentDidMount, comme on a un tableau de dépendance vide,
-         useEffect ne se redéclenchera jamais.
-    */
-    useEffect(() => {
-        console.log("Composant Monté");
-    }, []);
-}
+// On ne doit utiliser les hooks seulement dans des fonction Composant
+// ou dans des hooks 
 
-function sameAsComponentDidUpdate() {
-    const [compteur, setCompteur] = useState(0);
-
-    /*
-         Equivalent a ComposantDidUpdate la fonction sera declencher a chaque changement de valeur.
-    */
-    useEffect(() => {
-        console.log("ComposantDidUpdate");
-    });
+// {
+//     function sameAsComponentDidMount() {
+//         /*
+//              Equivalent a componentDidMount, comme on a un tableau de dépendance vide,
+//              useEffect ne se redéclenchera jamais.
+//         */
+//         useEffect(() => {
+//             console.log("Composant Monté");
+//         }, []);
+//     }
     
-    /**
-     * On peut redeclencher la fonction seulement si une ou plusieurs variable changent grace au []
-     */
-    useEffect(() => {
-        console.log("On surveille les changement de la variable compteur");
-    }, [compteur]);
-}
-
-function sameAsComponentDidWillUnMount() {
-    useEffect(() => {
-        // code ....
-        return () => {
-            console.log("Cette fonction est appellée uniquement si le composant est démonté");
-        }
-    });
+//     function sameAsComponentDidUpdate() {
+//         const [compteur, setCompteur] = useState(0);
     
-}
+//         /*
+//              Equivalent a ComposantDidUpdate la fonction sera declencher a chaque changement de valeur.
+//         */
+//         useEffect(() => {
+//             console.log("ComposantDidUpdate");
+//         });
+        
+//         /**
+//          * On peut redeclencher la fonction seulement si une ou plusieurs variable changent grace au []
+//          */
+//         useEffect(() => {
+//             console.log("On surveille les changement de la variable compteur");
+//         }, [compteur]);
+//     }
+    
+//     function sameAsComponentDidWillUnMount() {
+//         useEffect(() => {
+//             // code ....
+//             return () => {
+//                 console.log("Cette fonction est appellée uniquement si le composant est démonté");
+//             }
+//         });
+// }
+    
+// }
 
 function HookLifeCycle(props) {
     const [date, setDate] = useState(new Date());
