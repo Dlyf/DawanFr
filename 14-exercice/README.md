@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Exercice: ReShopAct
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Installer Boostrap, Boostrap Icon, react-router-dom
+2. Creer une fonction composant **Header**:
+    - Un titre
+    - Un logo
 
-## Available Scripts
+3. Importer ce **Header** dans le composant App
 
-In the project directory, you can run:
+4. Creer un Composant **ProduitListe**
 
-### `npm start`
+5. Ce composant **ProduitListe**, mettre un etat local avec une liste de produits.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+6. Afficher cette liste de produits. (Vous pouvez creer un composant ProduitItem pour separer la logique si vous le souhaitez.)
+  - Une image
+  - Un titre
+  - Un prix
+  - Une description
+  - Une quantite
+  - Un lien qui permet de naviguer vers une autre page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+7. Une fois que votre liste est affichée, creer un dossier **router**
 
-### `npm test`
+8. Dans le dossiers router, creer un fichier routes.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+9. Creer une fonction composant qui contiendra toutes vos routes
 
-### `npm run build`
+```
+    ex: <Route path="/" component={Welcome}>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+10. Dans le composant **App**, Importer le composant BrowserRouter
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+    ex: <BrowserRouter></BrowserRouter>
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+11. Dans le composant BrowserRouter, inclure Votre composant Routes
+```
+    <BrowserRouter>
+        <Routes/>
+    </BrowserRouter>
+```
 
-### `npm run eject`
+12. Creer une route '/' qui affichera votre composant </ProduitListe>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+13. Creer un composant **ProduitDetail** qui affichera les details d'un produit (Factice pour le moment) et l'id recu via l'url
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+14. Creer une route qui affichera votre composant **ProduitDetail**, et qui prendra un parametre Id 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+    /produits/5
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
