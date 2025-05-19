@@ -33,8 +33,8 @@ class Panier extends React.Component {
         // const nouveauxProduit = this.state.produitPanier.filter(p => p.id != id);
 
         const nouveauxProduit = [...this.state.produitPanier];
-        const index = copyProduit.findIndex(produit => produit.id == id);
-        copyProduit.splice(index, 1);
+        const index = nouveauxProduit.findIndex(produit => produit.id == id);
+        nouveauxProduit.splice(index, 1);
 
         this.setState({
             produitPanier: nouveauxProduit
